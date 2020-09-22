@@ -1,0 +1,37 @@
+{
+	"name": "提取behance详情图片",
+	"manifest_version": 2,
+	"version": "1.1.1",
+	"description": "提取behance详情图片",
+	"icons": {
+		"128": "128.png"
+	},
+	"minimum_chrome_version": "55.0.0.0",
+	"permissions": [
+		"cookies",
+		"storage",
+		"background",
+		"tabs",
+		"notifications",
+		"activeTab",
+		"contextMenus",
+		"storage",
+		"webRequest",
+		"webRequestBlocking",
+		"unlimitedStorage",
+		"http://*/*",
+		"https://*/*"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.behance.net/*"
+			],
+			"all_frames": true,
+			"run_at": "document_start",
+			"js": [
+				"js/behance.js"
+			]
+		}
+	]
+}
