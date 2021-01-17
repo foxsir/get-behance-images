@@ -5,7 +5,7 @@ let checkLoaded = setInterval(() => {
         let topHeight = 60;
         let counter = 0;
 
-        document.querySelectorAll("[data-ut=image]").forEach(tu => {
+        document.querySelectorAll("[data-ut=image], .project-module.image").forEach(tu => {
             let imgBox = document.createElement("a");
 
             if(tu.querySelector("img").src) {
