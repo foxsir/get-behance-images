@@ -1,11 +1,11 @@
 let checkLoaded = setInterval(() => {
-    if(document.readyState === 'interactive') {
+    if(document.readyState === 'complete') {
         clearInterval(checkLoaded);
 
         let topHeight = 60;
         let counter = 0;
 
-        document.querySelectorAll("[data-ut=image], .project-module.image").forEach(tu => {
+        document.querySelectorAll("[data-ut=image], .project-module.image, .grid__item-container").forEach(tu => {
             let imgBox = document.createElement("a");
 
             if(tu.querySelector("img").src) {
